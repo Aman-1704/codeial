@@ -8,13 +8,13 @@ router.get('/signUp', usersControllers.signUp);
 router.get('/signIn', usersControllers.signIn);
 
 router.post('/create', usersControllers.create);
-router.post('/create-session', usersControllers.createSession);
+// router.post('/create-session', usersControllers.createSession);
 
 
 // use passport as a middleware to authenticate
 router.post('/create-session', passport.authenticate(
   'local',
   {failureRedirect: '/users/signIn'},
-) ,usersControllers.createSession);
+), usersControllers.createSession);
 
 module.exports = router;
