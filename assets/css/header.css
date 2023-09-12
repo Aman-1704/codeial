@@ -1,0 +1,78 @@
+#partial-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: linear-gradient(135deg, #b947e3 0%, #4ea6e9 25%, #5ae9eb 50%, #f9f9f9 75%, #f10a0a 100%);
+
+}
+/* Define the style for the logo container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+@keyframes rotating {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+  
+  /* Style the logo image */
+.logo-image {
+    width: 70px; 
+    height: 55px; 
+    margin-right: 5px;  
+    animation-name: rotating;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+  
+  /* Style the text for the logo */
+.logo-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold; 
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #b947e3 0%, #4ea6e9 25%, #5ae9eb 50%, #f9f9f9 75%, #f10a0a 100%);
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    to{
+      background-position: 400%;
+    }
+} 
+#partial-header > #right-content {
+    min-width: 22%; 
+}
+#partial-header > #right-content > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px; 
+}
+#partial-header > #right-content > ul > li {
+    margin: 0px 10px;
+    
+    border-radius: 50px;
+    padding: 5px;
+    
+}
+#partial-header > #right-content > ul > li > a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    /* color: teal; */
+    
+    /* background-color: #b6b3b3; */
+    box-shadow: 0px 0px 3px 5px #080808;
+    padding: 5px;
+    border-radius: 15px; 
+}
